@@ -15,7 +15,7 @@
             <script>window.html5 || document.write('<script src="scripts/vendor/html5shiv.js"><\/script>')</script>
         <![endif]-->
     </head>
-    <body>
+    <body ng-app="GameOfThrones">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -24,38 +24,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">My Prototype</a>
+          <a class="navbar-brand" href="#">Game of Thrones</a>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" ng-controller="FamilyListController">
       <div class="row">
         <div class="col-lg-12">
-          <h1>Here be an awesome title!</h1>
-          <p id="myOutput">RequireJS javascript <strong style="color: red;">hasn't loaded yet</strong>.</p>
-
-          <div id="myButton" class="btn-group" style="display: none;">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Oh look, a Bootstrap button! <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="javascript:void(0)">If you can see this then Bootstrap JS is properly loaded</a></li>
-              <li class="divider"></li>
-              <li><a href="javascript:void(0)">Aw yeah!</a></li>
-            </ul>
-          </div>
-
+          <h1>Game of Thrones!</h1>
+          <ul>
+            <li ng-repeat="member in familyMembers">{{ member.name }}</li>
+          </ul>
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>Here be some copyright text</p>
+        <p>Game of Thrones is a show on HBO. Be careful of the spoilers!</p>
       </footer>
       
-      <script data-main="scripts/main.js" src="scripts/lib/require2.1.8.js"></script>
+      <script data-main="scripts/main.js" src="scripts/vendor/require2.1.8.js"></script>
     </div>   
     </body>
 </html>

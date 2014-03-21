@@ -1,20 +1,36 @@
 requirejs.config({
     baseUrl: 'scripts',
     paths: {
-        'jquery': 'lib/jquery-1.10.1.min',
-        'bootstrap': 'lib/bootstrap.min'
+        'angular': 'vendor/angular.min',
+        'ui-bootstrap': 'vendor/ui-bootstrap-tpls-0.10.0.min'
     },
     shim: {
-        'jquery': {
-            exports: '$'
+        'angular': {
+            exports: 'angular'
         },
-        'bootstrap': {
-            deps: ['jquery']
+        'ui-bootstrap': {
+            deps: ['angular']
         }
-    }
+    },
+    priority: [
+        "angular"
+    ]
 });
 
-define(['jquery', 'bootstrap'], function($) {
-    $('#myOutput').text("If you see this then the RequireJS javascript appears to be working ʕ•(ㅅ)•ʔ");
-    $('#myButton').show();
+//http://code.angularjs.org/1.2.1/docs/guide/bootstrap#overview_deferred-bootstrap
+window.name = "NG_DEFER_BOOTSTRAP!";
+
+// Init with vendor js (angular and ui-bootstrap) and the actual app
+define(['angular', 'ui-bootstrap', 'got/app'], function(angular, bootstrap, app) {
+    'use strict';
+    var $html = angular.element(document.getElementsByTagName('html')[0]);
+
+    angular.element().ready(function() {
+        angular.resumeBootstrap([app.name]);
+    });
+
+    // You can read about Angular here: http://angularjs.org/
+    // You can read about Angular UI bootstrap here: http://angular-ui.github.io/bootstrap/
+
+    // The app is at www/scripts/got/app.js
 });
