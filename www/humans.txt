@@ -7,12 +7,15 @@
 
 # THANKS
 
+    George R. R. Martin 
+        For a great fantasy series "The Song of Fire and Ice" and the TV-show adaptation "Game of Thrones"
+
     <name>
 
 # TECHNOLOGY COLOPHON
 
     HTML5
     CSS3
-    jQuery
     Twitter Bootstrap
-    RequireJS
+    Angular JS
+    Angular JS Bootstrap UI (Angular Directives for Twitter Bootstrap)
