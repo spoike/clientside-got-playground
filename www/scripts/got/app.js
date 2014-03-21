@@ -1,22 +1,17 @@
 define(['angular'], function(angular) {
     
-    console.log('Dude!');
+    var app = angular.module('GameOfThrones', []);
 
-    var gotModule = angular.module('GameOfThrones', []);
+    app.controller('FamilyListController', ['$scope', '$http', function($scope, $http) {
+        $scope.familyMembers = [];
 
-    gotModule.controller('FamilyListController', ['$scope', function($scope) {
-
-        $scope.familyMembers = [
-            {
-                name: "Cersei Lannister"
-            },
-            {
-                name: "Jamie Lannister"
-            }
-        ];
-
+        $http({method: 'GET', url: '/data/characters.json'}).
+            success(function(data, status, headers, config) {
+                var members = angular.fromJson(data);
+                $scope.familyMembers = members;
+            });
     }]);
 
-    return gotModule;
+    return app;
 
 });

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Tyrion Lannister",
+        "gender": "Male",
+        "house": "Lannister",
+        "description": "Nicknamed \"The Imp\", Tyrion Lannister is the younger brother of Cersei and Jaime Lannister. He is a dwarf; and his mother died during his birth, for which his father, Tywin Lannister, blames him."
+    },
+    {
+        "name": "Daenerys Targaryen",
+        "gender": "Female",
+        "house": "Targaryen",
+        "description": "Daenerys Targaryen is the exiled princess of the Targaryen dynasty. Also called \"the Stormborn\", she and her brother Viserys were smuggled to Essos during the end of Robert's Rebellion."
+    },
+    {
+        "name": "Jon Snow",
+        "gender": "Male",
+        "house": "Stark",
+        "description": "Jon Snow is the bastard son of Ned Stark who joins the Night's Watch. Jon is a talented fighter, but his sense of compassion and justice brings him into conflict with his harsh surroundings."
+    }
+]
