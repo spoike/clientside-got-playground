@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['www/**/*.js', '!www/scripts/vendor/*.js', '!www/scripts/require*'],
-                tasks: ['jshint:scripts']
+                tasks: ['jshint:scripts', 'karma:unit']
             },
             gruntfile: {
                 files: ['gruntfile.js'],
@@ -28,6 +28,13 @@ module.exports = function(grunt) {
         jshint: {
             scripts: ['<%= watch.scripts.files %>'],
             gruntfile: ['<%= watch.gruntfile.files %>']
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                reporters: 'dots'
+            }
         }
     });
     

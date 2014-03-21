@@ -23,6 +23,8 @@ window.name = "NG_DEFER_BOOTSTRAP!";
 // Init with vendor js (angular and ui-bootstrap) and the actual app
 define(['angular', 'ui-bootstrap', 'got/app'], function(angular, bootstrap, app) {
     'use strict';
+
+    console.log("lol");
     var $html = angular.element(document.getElementsByTagName('html')[0]);
 
     angular.element().ready(function() {
