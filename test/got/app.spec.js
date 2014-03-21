@@ -1,13 +1,38 @@
-define([], function() {
+define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
 
-    describe('Array', function(){
-      describe('#indexOf()', function(){
-        it('should return -1 when the value is not present', function(){
-//          assert.equal(-1, [1,2,3].indexOf(5));
-//          assert.equal(-1, [1,2,3].indexOf(0));
-            expect([1,2,3].length).to.equal(3);
-        })
-      })
+    describe('GameOfThrones app', function(){
+        var scope, createController, $httpBackend, jsonUrl = '/data/characters.json';
+
+        beforeEach(function() {
+            mocks.module('GameOfThrones');
+            mocks.inject(function($rootScope, $controller, $injector) {
+                $httpBackend = $injector.get('$httpBackend');
+                $httpBackend.when('GET', jsonUrl).respond([{name: 'Paige Turner', house: 'Turner'}]);
+                scope = $rootScope.$new();
+                createController = function() {
+                    return $controller('FamilyListController', {
+                        $scope: scope,
+                    });
+                }
+            });
+        });
+
+        afterEach(function() {
+            $httpBackend.verifyNoOutstandingExpectation();
+            $httpBackend.verifyNoOutstandingRequest();
+        });
+
+        it('should fetch authentication token', function() {
+            $httpBackend.expectGET(jsonUrl);
+            var controller = createController();
+            $httpBackend.flush();
+            expect(scope.familyMembers).to.exist;
+            expect(scope.familyMembers.length).to.equal(1);
+        });
+
+        it('should load characters from http service', function() {
+
+        });
     });
 
 });

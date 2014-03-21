@@ -20,6 +20,10 @@ module.exports = function(grunt) {
                 files: ['www/**/*.js', '!www/scripts/vendor/*.js', '!www/scripts/require*'],
                 tasks: ['jshint:scripts', 'karma:unit']
             },
+            tests: {
+                files: ['test/**/*.js'],
+                tasks: ['karma:unit']
+            },
             gruntfile: {
                 files: ['gruntfile.js'],
                 tasks: ['jshint:gruntfile']

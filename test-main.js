@@ -9,7 +9,6 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   if (TEST_REGEXP.test(file)) {
     // Normalize paths to RequireJS module names.
     allTestFiles.push(pathToModule(file));
-    console.log(allTestFiles);
   }
 });
 
@@ -20,11 +19,16 @@ require.config({
   paths: {
       'angular': 'vendor/angular.min',
       'ui-bootstrap': 'vendor/ui-bootstrap-tpls-0.10.0.min',
+      'angular-mocks': '../../test/angular-mocks',
       'chai': '../../test/chai'
   },
   shim: {
       'angular': {
           exports: 'angular'
+      },
+      'angular-mocks': {
+          deps: ['angular'],
+          exports: 'angular.mock'
       },
       'ui-bootstrap': {
           deps: ['angular']
@@ -38,7 +42,7 @@ require.config({
   ],
 });
 
-require(['chai'], function(chai) {
+require(['chai', 'angular-mocks'], function(chai) {
   window.expect = chai.expect;
   window.assert = chai.assert;
 
