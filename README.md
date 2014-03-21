@@ -2,6 +2,8 @@
 
 This is a brief NodeJS/Grunt starter project, or a simple bootstrap, for web developers who just want to start simple from scratch. No fluff, just start coding right away on HTML5/CSS and Javascript as soon as you clone the project!
 
+This version of the playground is using AngularJS and RequireJS as libraries for you to start up.
+
 ## How To Dev
 
 1. Install node w. npm
@@ -13,7 +15,7 @@ To get started look at `www/index.html` and `www/scripts/main.js`.
 
 # Notes for Web Devs
 
-This project is set up to use [RequireJS](http://requirejs.org/) and default [Twitter Bootstrap](http://getbootstrap.com/) from when you clone this repository.
+This project is set up to use [RequireJS](http://requirejs.org/) and default [Twitter Bootstrap](http://getbootstrap.com/) from when you clone this repository. There is also code for you to start up with [AngularJS](http://angularjs.org/) and also includes [Directives for Bootstrap's Components](http://angular-ui.github.io/bootstrap/).
 
 The [Gruntfile](http://gruntjs.com/sample-gruntfile) is set up to the [watch task](https://github.com/gruntjs/grunt-contrib-watch). Javascript files are monitored by default and are running through [JSHint](http://www.jshint.com/).
 
