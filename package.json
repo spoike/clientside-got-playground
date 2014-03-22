@@ -1,14 +1,14 @@
 {
-  "name": "clientside-playground",
+  "name": "clientside-got-playground",
   "version": "0.0.0",
-  "description": "A simple starter project for client-side HTML/CSS/Javascript",
+  "description": "A simple starter project for client-side Angular JS hacking",
   "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mikael Brassman",
-  "license": "MIT",
+  "license": "Creative Commons Attribution 4.0 International",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-connect": "~0.5.0",
