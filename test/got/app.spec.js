@@ -22,7 +22,7 @@ define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
             $httpBackend.verifyNoOutstandingRequest();
         });
 
-        it('should fetch authentication token', function() {
+        it('should load characters from http service', function() {
             $httpBackend.expectGET(jsonUrl);
             var controller = createController();
             $httpBackend.flush();
@@ -30,9 +30,6 @@ define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
             expect(scope.familyMembers.length).to.equal(1);
         });
 
-        it('should load characters from http service', function() {
-
-        });
     });
 
 });
