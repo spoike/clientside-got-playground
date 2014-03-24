@@ -4,6 +4,8 @@ This is a brief NodeJS/Grunt starter project, or a simple bootstrap, for web dev
 
 This version of the playground is using AngularJS and RequireJS as libraries for you to start up. It also has a unit test set up for you to get going with TDD.
 
+The data used for character bios is courtesy of this project: https://github.com/johnHackworth/GameOfThrones
+
 ## How To Dev
 
 1. Install [NodeJS w. NPM](http://nodejs.org/) if you haven't done so
