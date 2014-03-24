@@ -1,4 +1,4 @@
-define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
+define(['angular', 'angular-mocks', 'game-of-thrones/familyListCtrl'], function(angular, mocks) {
 
     describe('GameOfThrones app', function(){
         var scope, createController, $httpBackend, jsonUrl = '/data/characters.json';

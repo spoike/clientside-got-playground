@@ -21,7 +21,7 @@ requirejs.config({
 window.name = "NG_DEFER_BOOTSTRAP!";
 
 // Init with vendor js (angular and ui-bootstrap) and the actual app
-define(['angular', 'ui-bootstrap', 'got/app'], function(angular, bootstrap, app) {
+define(['angular', 'ui-bootstrap', 'game-of-thrones/app'], function(angular, bootstrap, app) {
     'use strict';
 
     var $html = angular.element(document.getElementsByTagName('html')[0]);
