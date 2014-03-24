@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint:scripts', 'karma:unit']
             },
             tests: {
-                files: ['test/**/*.js'],
+                files: ['test/**/*.js', '!test/vendor/*.js'],
                 tasks: ['karma:unit']
             },
             gruntfile: {

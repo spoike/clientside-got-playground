@@ -12,6 +12,8 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   }
 });
 
+console.log(allTestFiles);
+
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
   baseUrl: '/base/www/scripts',
@@ -19,8 +21,8 @@ require.config({
   paths: {
       'angular': 'vendor/angular.min',
       'ui-bootstrap': 'vendor/ui-bootstrap-tpls-0.10.0.min',
-      'angular-mocks': '../../test/angular-mocks',
-      'chai': '../../test/chai'
+      'angular-mocks': '../../test/vendor/angular-mocks',
+      'chai': '../../test/vendor/chai'
   },
   shim: {
       'angular': {
