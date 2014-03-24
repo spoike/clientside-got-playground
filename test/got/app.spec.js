@@ -22,13 +22,24 @@ define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
             $httpBackend.verifyNoOutstandingRequest();
         });
 
-        it('should load characters from http service', function() {
-            $httpBackend.expectGET(jsonUrl);
-            var controller = createController();
-            $httpBackend.flush();
-            expect(scope.familyMembers).to.exist;
-            expect(scope.familyMembers.length).to.equal(1);
+        describe('when creating the family list controller and retrieving characters from the show', function() {
+            
+            beforeEach(function() {
+                $httpBackend.expectGET(jsonUrl);
+                var controller = createController();
+                $httpBackend.flush();
+            });
+
+            it('should always set familyMembers to an array', function() {
+                expect(scope.familyMembers).to.exist;
+            });
+
+            it('should load characters from http service', function() {
+                expect(scope.familyMembers.length).to.equal(1);
+            });
+
         });
+
 
     });
 

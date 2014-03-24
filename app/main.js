@@ -1,5 +1,5 @@
 requirejs.config({
-    baseUrl: 'scripts',
+    baseUrl: '',
     paths: {
         'angular': 'vendor/angular.min',
         'ui-bootstrap': 'vendor/ui-bootstrap-tpls-0.10.0.min'

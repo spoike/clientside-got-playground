@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['app/**/*.js', '!app/scripts/vendor/*.js', '!app/scripts/require*'],
+                files: ['app/**/*.js', '!app/vendor/*.js'],
                 tasks: ['jshint:scripts', 'karma:unit']
             },
             tests: {
