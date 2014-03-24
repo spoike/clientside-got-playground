@@ -11,13 +11,13 @@ module.exports = function(grunt) {
             server: {
                     options: {
                     port: 8000,
-                    base: './www'
+                    base: './app'
                 }
             }
         },
         watch: {
             scripts: {
-                files: ['www/**/*.js', '!www/scripts/vendor/*.js', '!www/scripts/require*'],
+                files: ['app/**/*.js', '!app/scripts/vendor/*.js', '!app/scripts/require*'],
                 tasks: ['jshint:scripts', 'karma:unit']
             },
             tests: {
