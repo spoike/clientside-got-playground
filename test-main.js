@@ -39,7 +39,7 @@ require.config({
   },
   priority: [
       "angular"
-  ],
+  ]
 });
 
 require(['chai', 'angular-mocks'], function(chai) {
