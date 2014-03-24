@@ -11,9 +11,9 @@ define(['angular', 'angular-mocks', 'got/app'], function(angular, mocks) {
                 scope = $rootScope.$new();
                 createController = function() {
                     return $controller('FamilyListController', {
-                        $scope: scope,
+                        $scope: scope
                     });
-                }
+                };
             });
         });
 

@@ -22,15 +22,27 @@ module.exports = function(grunt) {
             },
             tests: {
                 files: ['test/**/*.js', '!test/vendor/*.js'],
-                tasks: ['karma:unit']
+                tasks: ['jshint:tests', 'karma:unit']
             },
             gruntfile: {
-                files: ['gruntfile.js'],
+                files: ['Gruntfile.js'],
                 tasks: ['jshint:gruntfile']
             }
         },
         jshint: {
-            scripts: ['<%= watch.scripts.files %>'],
+            scripts: {
+                options: {
+                    es3: true,
+                },
+                src: ['<%= watch.scripts.files %>']
+            },
+            tests: {
+                options: {
+                    es3: true,
+                    expr: true
+                },
+                src: ['<%= watch.tests.files %>']
+            },
             gruntfile: ['<%= watch.gruntfile.files %>']
         },
         karma: {
