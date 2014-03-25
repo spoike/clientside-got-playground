@@ -13,9 +13,9 @@ The data used for character bios is courtesy of this project: https://github.com
 3. Install project dependencies with `npm install`
 4. Run `grunt` to start server, watch the files for changes, and browse to index
 
-To get started look at `www/index.html` and `www/scripts/main.js`.
+To get started look at `app/index.html` and `app/main.js`, the entry point for this client-side only web app. There is also a unit test readily available, at `test/game-of-thrones/familyListCtrl.spec.js`, that tests that the controller uses `$http` service correctly.
 
-# Notes for Web Devs
+## Implementation Details
 
 This project is set up to use [RequireJS](http://requirejs.org/) and default [Twitter Bootstrap](http://getbootstrap.com/) from when you clone this repository. There is also code for you to start up with [AngularJS](http://angularjs.org/) and also includes [Directives for Bootstrap's Components](http://angular-ui.github.io/bootstrap/).
 
