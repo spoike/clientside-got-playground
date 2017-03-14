@@ -19,7 +19,7 @@ To get started look at `app/index.html` and `app/main.js`, the entry point for t
 
 This project is set up to use [RequireJS](http://requirejs.org/) and default [Twitter Bootstrap](http://getbootstrap.com/) from when you clone this repository. There is also code for you to start up with [AngularJS](http://angularjs.org/) and also includes [Directives for Bootstrap's Components](http://angular-ui.github.io/bootstrap/).
 
-The [Gruntfile](http://gruntjs.com/sample-gruntfile) is set up to the [watch task](https://github.com/gruntjs/grunt-contrib-watch). Javascript files are monitored by default and are running through [JSHint](http://www.jshint.com/). The default watch task also runs unit tests with [Mocha](http://visionmedia.github.io/mocha/) and [Chai](http://chaijs.com/) by using the [Karma test runner](http://karma-runner.github.io/).
+The [Gruntfile](http://gruntjs.com/sample-gruntfile) is set up to the [watch task](https://github.com/gruntjs/grunt-contrib-watch). Javascript files are monitored by default and are running through [JSHint](http://www.jshint.com/). The default watch task also runs unit tests with [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/) by using the [Karma test runner](http://karma-runner.github.io/).
 
 ## License
 
